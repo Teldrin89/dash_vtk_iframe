@@ -33,11 +33,13 @@ app.layout = html.Div(children=[
     # dc.DashCanvas(id='canvas-1')
     # html.Canvas(id="html-canvas"),
     # Testing different src for iframe - local html file
-    # html.Iframe(
-    #     src="https://kitware.github.io/vtk-js/examples/GeometryViewer/GeometryViewer.html",
-    #     # src="assets/geom_view.html",
-    #     height=300,
-    #     width=600),
+    html.Div(children=[
+        html.Iframe(
+            src="https://kitware.github.io/vtk-js/examples/GeometryViewer/GeometryViewer.html",
+            # src="assets/geom_view.html",
+            height=600,
+            width=800)], style={'text-align': 'center'}
+    ),
     dcc.Loading(
         html.Button(id="test-button")
     )
